@@ -12,6 +12,7 @@ public class UserService {
 
 //	constructor to read data from file and create array
 	public UserService(String filename) throws IOException {
+	
 		users = new ArrayList<>();
 		BufferedReader fileReader = null;
 		fileReader = new BufferedReader(new FileReader("data.txt"));
