@@ -10,7 +10,7 @@ public class UserService {
 
 	private static List<User> users;
 
-//	constructor to read data from file and create array
+
 	public UserService(String filename) throws IOException {
 	
 		users = new ArrayList<>();
@@ -26,23 +26,15 @@ public class UserService {
 				users.add(new User(username, password, name));
 			}
 		}
-//		 fileReader = new BufferedReader(new FileReader("data.txt")); 
-//		 	String line;
-//			while ((line = reader.readLine()) != null) {
-//				String[] parts = line.split(",");
-//				if (parts.length == 3) {
-//					users.add(new User(parts[0], parts[1], parts[2]));// Create a User object from file data
-//				}
-//			}
 	}
 
 	public static User validateLogin(String email, String password) {
 		for (User user : users) {
-			if (user.getUsername().equals(email) && user.getPassword().equals(password)) {
-				return user;// Return matching User.
+			if (user.getUsername().equalsIgnoreCase(email) && user.getPassword().equals(password)) {
+				return user;
 			}
 		}
-		return null; // return null if no match is found
+		return null;
 	}
 
 }

@@ -25,9 +25,9 @@ public class UserLoginApplication {
 			if (user != null) {
 				System.out.println("Welcome " + ((User) user).getName() + ".");
 
-				return; // exit the program after successful login attempt
-			} else {// if login fails
-				attempts++;// Increment the number of failed attempts
+				return; 
+			} else {
+				attempts++;
 				if (attempts < maxAttempts) {
 					System.out.println("invalid login, please try again");
 				}

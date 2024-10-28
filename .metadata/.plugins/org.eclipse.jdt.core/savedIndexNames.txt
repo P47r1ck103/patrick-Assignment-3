@@ -46,7 +46,6 @@ INDEX VERSION 1.134+C:\Users\p47r1\OneDrive\Desktop\patrick-Assignment-3\.metada
 1928251777.index
 4216645799.index
 3232608269.index
-1060727940.index
 1750426388.index
 1577918718.index
 2155407690.index
