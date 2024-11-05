@@ -11,9 +11,9 @@ public class UserService {
 	private static List<User> users;
 
 
-	public UserService(String filename) throws IOException {
+	public UserService(String filename){
 	
-		users = new ArrayList<>();
+		
 		BufferedReader fileReader = null;
 		fileReader = new BufferedReader(new FileReader("data.txt"));
 		String line;
