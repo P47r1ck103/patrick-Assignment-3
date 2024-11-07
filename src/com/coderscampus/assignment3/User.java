@@ -1,3 +1,6 @@
+package com.coderscampus.assignment3;
+
+
 
 public class User {
 	private String username;
@@ -6,7 +9,7 @@ public class User {
 	
 	public User(String username, String password, String name) {
 		this.username = username;
-		this.password = passwrod;
+		this.password = password;
 		this.name = name;
 	}
 	public String getUsername() {

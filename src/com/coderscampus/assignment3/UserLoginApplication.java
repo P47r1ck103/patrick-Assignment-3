@@ -1,8 +1,12 @@
 
+package com.coderscampus.assignment3;
+
+import java.util.Scanner;
+
 public class UserLoginApplication {
 
 	public static void main(String[] args) {
-		UserService userService = new UserService("data.txt");
+		UserService userService = new UserService();
 		Scanner scanner = new Scanner(System.in);
 		int attempts = 0;
 		int maxAttempts = 5;
@@ -28,8 +32,8 @@ public class UserLoginApplication {
 			 }				
 		 }
 		System.out.println("Too many failed login attempts, you are now locked out.");
-		scanner.close
+		scanner.close();
 	  }
-	}
-
 }
+
+
