@@ -2,12 +2,13 @@
 package com.coderscampus.assignment3;
 
 import java.io.BufferedReader;
+import java.io.FileReader;
 
 public class UserService {
 
 	User[] usersArray = new User[100];
 			
-		BufferedReader fileReader=null( fileReader=new BufferedReader(new FileReader("filename"));
+		BufferedReader fileReader = new BufferedReader(new FileReader("data.txt"));
 	String line;
 
 	while((line=fileReader.readLine())!=null)
@@ -34,10 +35,11 @@ public class UserService {
 public static User validateLogin(String email, String password) {
 	User[] users;
 	for (User user : users) {
-		if (user.getUsername().equals(email) && user.getPassword().equals(password)) {
+		if (user.getUsername().equalsIgnoreCase(email) && user.getPassword().equals(password)) {
 			return user;
 		}
 	}
 	return null;
 	}
+}
 }
