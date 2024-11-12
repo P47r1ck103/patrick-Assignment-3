@@ -12,6 +12,10 @@ public class User {
 		this.password = password;
 		this.name = name;
 	}
+	@Override
+	public String toString() {
+		return "User [username=" + username + ", password=" + password + ", name=" + name + "]";
+	}
 	public String getUsername() {
 		return username;
 	}
