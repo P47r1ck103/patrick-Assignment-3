@@ -15,26 +15,24 @@ public class UserLoginApplication {
 		while (attempts < maxAttempts) {
 			System.out.println("Enter your email: ");
 			String email = scanner.nextLine();
-			
+
 			System.out.println("Enter your password: ");
 			String password = scanner.nextLine();
-			
+
 			User user = userService.validateLogin(email, password);
-			
+
 			if (user != null) {
 				System.out.println("welcome " + ((User) user).getName() + ",");
-				
+
 				return;
-			}else {
+			} else {
 				attempts++;
 				if (attempts < maxAttempts) {
 					System.out.println("Invalid login, please try again");
-				 }
-			 }				
-		 }
+				}
+			}
+		}
 		System.out.println("Too many failed login attempts, you are now locked out.");
 		scanner.close();
-	  }
+	}
 }
-
-
