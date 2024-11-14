@@ -34,15 +34,6 @@ public class UserService {
 		}
 	}
 
-
-
-public static User validateLogin(String email, String password) {
-	User[] users;
-	for (User user : users) {
-		if (user.getUsername().equalsIgnoreCase(email) && user.getPassword().equals(password)) {
-			return user;
-=======
-
 	public User validateLogin(String email, String password) {
 		
 		for (User user : usersArray) {
@@ -53,4 +44,4 @@ public static User validateLogin(String email, String password) {
 		}
 		return null;
 	}
-}}
+}s
